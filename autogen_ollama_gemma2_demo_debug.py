@@ -57,9 +57,7 @@ except Exception as e:
 
 # UserProxyAgent config
 try:
-    user_proxy = UserProxyAgent(
-        "user_proxy", code_execution_config={"executor": autogen.coding.LocalCommandLineCodeExecutor(work_dir="coding")}
-    )
+    user_proxy = UserProxyAgent("user_proxy", code_execution_config={"executor": autogen.coding.LocalCommandLineCodeExecutor(work_dir="coding")})
 except Exception as e:
     print(f"Error creating UserProxyAgent: {e}")
 
